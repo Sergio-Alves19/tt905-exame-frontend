@@ -3,7 +3,7 @@
 }
 
 .open{
-    display: block;
+    display: flex;
 }
 
 a{
@@ -25,15 +25,9 @@ header {
     font-family: 'Arial';
 }
 
-
 header .logo{
     font-size: 50px;
     text-align: center;
-}
-
-.container {
-    display: flex;
-    padding-top: 50px;
 }
 
 .formulario{
@@ -50,6 +44,24 @@ header .logo{
     font-family: 'Arial';
 }
 
+.formulario_login{
+    color:black;
+    width: 45%;
+    padding: 1%;
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+    background-color: rgba(233, 227, 227, 0.746);
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Arial';
+}
+
+.autenticacao{
+    margin: 0 auto;
+}
+
 h2 {
     font-family: 'Arial Black';
     font-size: 25px;
@@ -63,12 +75,13 @@ input[type=text], input[type=password], input[type=date], select{
 }
 
 input[type=submit], button{
-    font-size: 20px;
+    font-size: 18px;
     background-color: white;
     border: 2px solid #324266;
     cursor: pointer;
     text-align: center;
     border-radius: 10px;
+    height: 30px;
 }
 
 input[type=submit]:hover, button:hover{

@@ -16,31 +16,36 @@
         <header>
             <h1 class="logo">CLASS TASK</h1>
             <div id="header_form" class="closed">
-                <form id="login_form" class="formulario">
+                <form id="login_form" class="formulario_login">
                     <label>Email: <input type="text" name="email"/></label>
                     <label>Senha: <input type="password" name="senha"/></label><br><br>
                     
                     <div id="div_cadastro" class="closed">
-                        <button type="submit" onclick="submitCadastro()">Cadastrar</button>
-                        <p class="center">Possui cadastro? <a onclick="switchLogin()">Entrar</a></p>
+                        <div class="autenticacao">
+                            <button type="submit" onclick="submitCadastro()">Cadastrar</button>
+                            Possui cadastro? <a onclick="switchLogin()">Entrar</a>
+                        </div>
                     </div>
 
                     <div id="div_login" class="open">
-                        <button type="submit" onclick="submitEntrar()">Entrar</button>
-                        <p>Não possui cadastro? <a onclick="switchCadastro()">Cadastrar</a></p>
+                        <div class="autenticacao">
+                            <button type="submit" onclick="submitEntrar()">Entrar</button>
+                            Não possui cadastro? <a onclick="switchCadastro()">Cadastrar</a>
+                        </div>
                     </div>
 
                 </form>
             </div>
 
             <div id="logged_user" class="closed">
-                <form class="formulario">
+                <form class="formulario_login">
                     <p>Usuário Autenticado: <span id="user_span">Usuário</span></p>
                     <button type="submit" onclick="logout()">Sair</button>
                 </form>
             </div>
         </header>
-        <div class="container">
+        <br><br>
+        <div id="container" class="closed">
             <form id = "task_form" class="formulario">
                 <h2>MANAGE TASK</h2>
     

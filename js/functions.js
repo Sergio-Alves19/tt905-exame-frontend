@@ -174,11 +174,14 @@ async function submitEntrar(){
 firebase.auth().onAuthStateChanged((user) => {
     header_form = document.getElementById("header_form");
     logged_user = document.getElementById("logged_user");
+    container = document.getElementById("container");
+
     if (user) {
         // Usuário logado
         var uid = user.uid;
         header_form.className = "closed";
         logged_user.className = "open";
+        container.className = "open";
 
         user_span = document.getElementById("user_span");
         user_span.innerHTML = user.email;
@@ -189,5 +192,6 @@ firebase.auth().onAuthStateChanged((user) => {
         // Usuário deslogado
         header_form.className = "open";
         logged_user.className = "closed";
+        container.className = "closed";
     }
 });
