@@ -1,0 +1,73 @@
+.closed{
+    display: none;
+}
+
+.open{
+    display: block;
+}
+
+a{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+#header_form{
+    display: flex;
+    justify-content: space-around;
+}
+
+#login_form{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header .container{
+    color: white;
+}
+
+
+header .logo{
+    margin-left: 50px;
+    color: white;
+    font-family: 'Arial Black', Times;
+    font-size: 50px;
+}
+
+body {
+    padding: 5px;
+    margin: 5px;
+    background-color: #324266;
+    font-family: 'Trebuchet MS';
+}
+
+input[type=text],
+input[type=email],
+input[type=number],
+input[type=password],
+select{
+    width: 80%;
+    padding-left: 15px;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 15px;
+    border: 1px solid #324266;
+    outline: none;
+}
+
+input[type=submit], button{
+    font-size: 1em;
+    display: block;
+    background-color: white;
+    border: 2px solid #324266;
+    outline: 0;
+    cursor: pointer;
+    margin: 0 auto;
+    text-align: center;
+    border-radius: 15px;
+}
+
+input[type=submit]:hover, button:hover{
+    background: #324266;
+    color: white;
+}

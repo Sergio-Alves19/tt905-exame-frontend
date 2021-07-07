@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+        <link rel="stylesheet" type="text/css" href="css/style.css"/>
+        <meta charset="UTF-8">
+        <title> Alunos </title>
+        <script src="https://www.gstatic.com/firebasejs/8.7.0/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.7.0/firebase-database.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.7.0/firebase-auth.js"></script>
+        <script src="js/functions.js"></script>
+    </head>
+
+    <body onload="onLoad()">
+        <header>
+            <div id="header_form" class="closed">
+                <h1 class="logo">CLASS TASK</h1>
+                <form id="login_form" class="container">
+                    <label>Email: <input type="text" name="email"/></label>
+                    <label>Senha: <input type="password" name="senha"/></label>
+                    
+                    <div id="div_cadastro" class="closed">
+                        <button type="submit" onclick="submitCadastro()">Cadastrar</button>
+                        <p class="center">Possui cadastro? <a onclick="switchLogin()">Entrar</a></p>
+                    </div>
+
+                    <div id="div_login" class="open">
+                        <button type="submit" onclick="submitEntrar()">Entrar</button>
+                        <p>Não possui cadastro? <a onclick="switchCadastro()">Cadastrar</a></p>
+                    </div>
+
+                </form>
+            </div>
+
+            <div id="logged_user" class="closed">
+                <p>Usuário Autenticado: <span id="user_span">Usuário</span></p>
+                <p><a onclick="logout()">Sair</a></p>
+            </div>
+        </header>
+
+        <form id = "task_form">
+
+            <h1>Adicionar uma task</h1>
+
+            <label>Task: <input type="text" name="task"></label><br/>
+
+            <label>Matéria: <input type="text" name="materia"></label><br/>
+
+            <label>Data de Conclusão:<input type="date" name="data_conclusao"></label><br/>
+
+            <h2>Status:</h2>
+            <label><input type="radio" name="status" value="to_do">To Do</label><br/>
+            <label><input type="radio" name="status" value="in_progress">In Progress</label><br/>
+            <label><input type="radio" name="status" value="done">Done</label><br/>
+
+            <button type="submit" onclick="return submitTask()">Submit</button>
+
+            <h2> Lista de Tasks</h2>
+            <select id="taskList"></select>
+            <button type="submit" onclick="return deleteForm()">Delete</button>
+        </form>
+    </body>
+</html>
