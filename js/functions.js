@@ -98,6 +98,7 @@ function deleteForm(){
     if (select){
         const uid = firebase.auth().currentUser.uid;
         msgRef.child(`${uid}`).child(select).remove();
+        alert("Task removida com sucesso.")
         limparForm();
     }
 
