@@ -6,15 +6,36 @@ function submitTask(){
     const status = form["status"].value;
 
     const select = document.getElementById("taskList").value;
-    
+
     if (select){
         updateFirebase(task, materia, data_conclusao, status, select);
+        alert("Task atualizada com sucesso.")
     } else {
         postFirebase(task, materia, data_conclusao, status);
+        alert("Task criada com sucesso.")
     }
-    
+ 
+    limparForm();
+
     return false;
 }
+
+function limparForm(task_form) {
+    var form = document.getElementById(task_form);
+
+    var inputs = form.querySelectAll('input');
+    for (var i = 0; i < inputs.length; i++) {
+        if (inputs[i].type != 'radio') {
+            inputs[i].value = '';
+        }
+    }
+
+    inputs = form.querySelectAll('input[type=radio]');
+    for (i = 0; i < inputs.length; i++) {
+        inputs[i].checked = false;
+    }
+}
+
 
 var firebaseConfig = {
     apiKey: "AIzaSyDtPwNR9Al9ia3gfAylfXdk4wZTAkJ1Mvw",
@@ -73,11 +94,13 @@ function getFromFirebase(){
 
 function deleteForm(){
     const select = document.getElementById("taskList").value;
-    
+
     if (select){
         const uid = firebase.auth().currentUser.uid;
         msgRef.child(`${uid}`).child(select).remove();
+        limparForm();
     }
+
     return false;
 }
 
