@@ -14,11 +14,11 @@
 
     <body onload="onLoad()">
         <header>
+            <h1 class="logo">CLASS TASK</h1>
             <div id="header_form" class="closed">
-                <h1 class="logo">CLASS TASK</h1>
-                <form id="login_form" class="container">
+                <form id="login_form" class="formulario">
                     <label>Email: <input type="text" name="email"/></label>
-                    <label>Senha: <input type="password" name="senha"/></label>
+                    <label>Senha: <input type="password" name="senha"/></label><br><br>
                     
                     <div id="div_cadastro" class="closed">
                         <button type="submit" onclick="submitCadastro()">Cadastrar</button>
@@ -34,31 +34,36 @@
             </div>
 
             <div id="logged_user" class="closed">
-                <p>Usuário Autenticado: <span id="user_span">Usuário</span></p>
-                <p><a onclick="logout()">Sair</a></p>
+                <form class="formulario">
+                    <p>Usuário Autenticado: <span id="user_span">Usuário</span></p>
+                    <button type="submit" onclick="logout()">Sair</button>
+                </form>
             </div>
         </header>
-
-        <form id = "task_form">
-
-            <h1>Adicionar uma task</h1>
-
-            <label>Task: <input type="text" name="task"></label><br/>
-
-            <label>Matéria: <input type="text" name="materia"></label><br/>
-
-            <label>Data de Conclusão:<input type="date" name="data_conclusao"></label><br/>
-
-            <h2>Status:</h2>
-            <label><input type="radio" name="status" value="to_do">To Do</label><br/>
-            <label><input type="radio" name="status" value="in_progress">In Progress</label><br/>
-            <label><input type="radio" name="status" value="done">Done</label><br/>
-
-            <button type="submit" onclick="return submitTask()">Submit</button>
-
-            <h2> Lista de Tasks</h2>
-            <select id="taskList"></select>
-            <button type="submit" onclick="return deleteForm()">Delete</button>
-        </form>
+        <div class="container">
+            <form id = "task_form" class="formulario">
+                <h2>MANAGE TASK</h2>
+    
+                <label>TASK:<br><input type="text" name="task"></label><br/><br>
+    
+                <label>MATÉRIA:<br><input type="text" name="materia"></label><br/><br>
+    
+                <label>DATA DE CONCLUSÃO:<br><input type="date" name="data_conclusao"></label><br/>
+    
+                <br>STATUS:<br>
+                <label><input type="radio" name="status" value="to_do">To Do</label>
+                <label><input type="radio" name="status" value="in_progress">In Progress</label>
+                <label><input type="radio" name="status" value="done">Done</label>
+    
+                <br><br><button type="submit" onclick="return submitTask()">Submit</button>
+            </form>
+    
+            <form id="lista_form" class="formulario">
+                <h2> LISTA DE TASKS</h2>
+                <select id="taskList"></select>
+                <br><br><button type="submit" onclick="return deleteForm()">Delete</button>
+            </form>
+        </div>
+        
     </body>
 </html>

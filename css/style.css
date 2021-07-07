@@ -11,60 +11,64 @@ a{
     cursor: pointer;
 }
 
-#header_form{
-    display: flex;
-    justify-content: space-around;
+a:hover{
+    color:blue;
 }
 
-#login_form{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+body {
+    background-color: #324266;
 }
 
-header .container{
+header {
     color: white;
+    text-align: center;
+    font-family: 'Arial';
 }
 
 
 header .logo{
-    margin-left: 50px;
-    color: white;
-    font-family: 'Arial Black', Times;
     font-size: 50px;
+    text-align: center;
 }
 
-body {
-    padding: 5px;
-    margin: 5px;
-    background-color: #324266;
-    font-family: 'Trebuchet MS';
+.container {
+    display: flex;
+    padding-top: 50px;
 }
 
-input[type=text],
-input[type=email],
-input[type=number],
-input[type=password],
-select{
-    width: 80%;
-    padding-left: 15px;
-    height: 30px;
-    line-height: 30px;
-    border-radius: 15px;
-    border: 1px solid #324266;
-    outline: none;
+.formulario{
+    color:black;
+    width: 25%;
+    padding: 1%;
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+    background-color: rgba(233, 227, 227, 0.746);
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Arial';
+}
+
+h2 {
+    font-family: 'Arial Black';
+    font-size: 25px;
+}
+
+input[type=text], input[type=password], input[type=date], select{
+    width: 250px;
+    text-align: center;
+    border-radius: 10px;
+    font-size: 16px;
 }
 
 input[type=submit], button{
-    font-size: 1em;
-    display: block;
+    font-size: 20px;
     background-color: white;
     border: 2px solid #324266;
-    outline: 0;
     cursor: pointer;
-    margin: 0 auto;
     text-align: center;
-    border-radius: 15px;
+    border-radius: 10px;
 }
 
 input[type=submit]:hover, button:hover{

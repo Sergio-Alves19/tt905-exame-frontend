@@ -113,7 +113,7 @@ async function logout(){
         const uid = firebase.auth().currentUser.uid;
         msgRef.child(`${uid}`).off('value');
     } catch (error) {
-        alert(error.message);
+        
     }
     
 }
