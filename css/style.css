@@ -16,7 +16,7 @@ a:hover{
 }
 
 body {
-    background-color: #324266;
+    background-color: #10192e;
 }
 
 header {
@@ -37,7 +37,7 @@ header .logo{
     text-align: center;
     display: block;
     margin: 0 auto;
-    background-color: rgba(233, 227, 227, 0.746);
+    background-color: rgba(233, 227, 227, 0.842);
     border-radius: 10px;
     font-size: 20px;
     font-weight: bold;
@@ -51,7 +51,7 @@ header .logo{
     text-align: center;
     display: block;
     margin: 0 auto;
-    background-color: rgba(233, 227, 227, 0.746);
+    background-color: rgba(233, 227, 227, 0.842);
     border-radius: 10px;
     font-size: 20px;
     font-weight: bold;
@@ -77,7 +77,7 @@ input[type=text], input[type=password], input[type=date], select{
 input[type=submit], button{
     font-size: 18px;
     background-color: white;
-    border: 2px solid #324266;
+    border: 2px solid #10192e;
     cursor: pointer;
     text-align: center;
     border-radius: 10px;
@@ -85,6 +85,6 @@ input[type=submit], button{
 }
 
 input[type=submit]:hover, button:hover{
-    background: #324266;
+    background: #10192e;
     color: white;
 }
